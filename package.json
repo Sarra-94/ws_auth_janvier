@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "back": "nodemon server"
+    "back": "nodemon server",
+    "front": "cd client && npm start",
+    "dev": "concurrently \"npm run front\" \"npm run back\""
   },
   "keywords": [
     "node",
@@ -14,6 +16,7 @@
   "author": "sarra",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^6.0.2",
     "dotenv": "^8.5.1",
     "nodemon": "^2.0.7"
   },

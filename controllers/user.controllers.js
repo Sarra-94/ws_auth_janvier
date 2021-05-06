@@ -59,7 +59,7 @@ exports.Login = async (req, res) => {
     if (!comparePass) {
       return res.status(400).send({ errors: [{ msg: "bad credential" }] });
     }
-    // CRRE UN TOKEN= meftaa7
+    // CREE UN TOKEN= meftaa7
     const token = jwt.sign(
       {
         id: findUser._id,
@@ -73,4 +73,4 @@ exports.Login = async (req, res) => {
   }
 };
 
-// module.exports = { Register };
+// module.exports = { Register,  };
